@@ -1,9 +1,47 @@
 #titleText {
-  background-color: coral;
+  /* background-image: url(../img/banner1.jpg); */
+  /* height: 100%; */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+ height: 300px;
 }
-.result {
-
+#titleText h1{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
 }
 #result {
     display: none;
+}
+#type {
+  display: none;
+}
+.hideStyle {
+  background-color: black;
+  opacity: 0.5;
+  filter: Alpha(opacity=50); /* IE8 and earlier */
+}
+input[type=checkbox] + label {
+  color: red;
+  font-style: italic;
+}
+body {
+  background-image: url(../img/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   height: 400px;
+
+
+}
+form {
+ background-color: rgba(0,0,0,.5);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
 }

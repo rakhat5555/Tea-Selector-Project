@@ -49,14 +49,27 @@ var database = [
       rank:  0
     }
 ];
-
+// function change image
+function swapImage(imgToSwap) {
+  imgToSwap.src = "img/jasmine.jpg";
+  imgToSwap.alt = "green-teaCup"
+}
+function swapBack(imgToSwap) {
+  imgToSwap.src = "img/green-tea.jpg";
+  imgToSwap.alt = "green-tea"
+}
 
 $(document).ready(function() {
+  $(".clickType").click(function() {
+    $("#type").toggle();
+    // $("#style").addClass('hideStyle')
+  });
   $("form#selector").submit(function(event) {
     event.preventDefault();
     var tea = new Tea();
     $("input:checkbox[name=type]:checked").each(function() {
       tea.type.push($(this).val());
+      $(".typeResult").text(tea.type);
       });
     $("input:checkbox[name=style]:checked").each(function() {
       tea.style.push($(this).val());
@@ -67,7 +80,7 @@ $(document).ready(function() {
     tea.getTea(tea);
 
     $("#result").show();
-    $(".result").append( "Your tea type requests: ");
+    $(".result").show( "Your tea type requests: ");
 
   });
 });
